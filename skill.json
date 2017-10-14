@@ -5,8 +5,11 @@
         "en-US": {
           "summary": "Helps discover Javascript Conferences",
           "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
+          "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
           "name": "JS Conf Calendar",
-          "description": "Helps discover Javascript Conferences"
+          "description": "Helps discover Javascript Conferences",
+          "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
+          "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
         }
       },
       "isAvailableWorldwide": true,
