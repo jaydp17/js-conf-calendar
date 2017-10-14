@@ -47,18 +47,18 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+package:
+  include:
+    - build/**
+  exclude:
+    - "*/**"
 
 functions:
   skill:
-    handler: index.hello
+    handler: main.handler
     description: An Alexa Skill that helps discover Javascript Conferences
+    events:
+      - alexaSkill
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

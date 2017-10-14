@@ -4,14 +4,22 @@
   "description": "An Alexa Skill that helps discover Javascript Conferences",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    
     "deploy:skill": "ask deploy --target skill && ask deploy --target model",
+
+    "predeploy:function": "yarn build",
     "deploy:function": "sls deploy -f skill",
+
+    "predeploy:lambda": "yarn build",
     "deploy:lambda": "sls deploy",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jaydeep Solanki <jaydp17@gmail.com> (https://jaydp.com)",
   "license": "MIT",
   "devDependencies": {
+    "@types/alexa-sdk": "1.0.10",
     "@types/webpack": "3.0.13",
     "ask-cli": "1.0.0-beta.3",
     "prettier": "1.7.4",
@@ -20,5 +28,8 @@
     "ts-node": "3.3.0",
     "typescript": "2.5.3",
     "webpack": "3.7.1"
+  },
+  "dependencies": {
+    "alexa-sdk": "1.0.14"
   }
 }

@@ -4,10 +4,7 @@
       "locales": {
         "en-US": {
           "summary": "Helps discover Javascript Conferences",
-          "examplePhrases": [
-            "Alexa open JS Conf Calendar",
-            "Alexa ask JS Conf Calendar about upcoming conferences"
-          ],
+          "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
           "name": "JS Conf Calendar",
           "description": "Helps discover Javascript Conferences"
         }
@@ -20,7 +17,7 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom"
+          "uri": "js-conf-calendar-dev-skill"
         }
       }
     },
