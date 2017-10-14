@@ -59,3 +59,10 @@ typings/
 
 # config folder by ask-cli
 .ask
+
+# Serverless directories
+.serverless
+
+# Output
+build
+dist
