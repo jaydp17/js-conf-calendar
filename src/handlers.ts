@@ -3,27 +3,12 @@ import { getImmediateNext } from './utility';
 
 export default {
   LaunchRequest: function() {
-    this.emit('SayHello');
-  },
-  HelloWorldIntent: function() {
-    this.emit('SayHello');
-  },
-  MyNameIsIntent: function() {
-    this.emit('SayHelloName');
-  },
-  SayHello: function() {
-    this.response.speak('Hello World!').cardRenderer('hello world', 'hello world');
-    this.emit(':responseReady');
+    this.emit('NextConf');
   },
   NextConf: async function() {
     const confList = await getData();
     const nextConf = getImmediateNext(confList);
     this.response.speak(`The next conference is ${nextConf.name} in ${nextConf.city}, ${nextConf.country}`);
-    this.emit(':responseReady');
-  },
-  SayHelloName: function() {
-    var name = this.event.request.intent.slots.name.value;
-    this.response.speak('Hello ' + name).cardRenderer('hello world', 'hello ' + name);
     this.emit(':responseReady');
   },
   SessionEndedRequest: function() {
