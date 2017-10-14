@@ -17,7 +17,7 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "js-conf-calendar-dev-skill"
+          "sourceDir": "src"
         }
       }
     },
