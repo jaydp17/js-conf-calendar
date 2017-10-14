@@ -28,6 +28,10 @@
   version "8.0.34"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.34.tgz#55f801fa2ddb2a40dd6dfc15ecfe1dde9c129fe9"
 
+"@types/ramda@types/npm-ramda#dist":
+  version "0.24.3"
+  resolved "https://codeload.github.com/types/npm-ramda/tar.gz/75d9e8dd6700138b8c4305a147a93044678a497d"
+
 "@types/source-map@*":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@types/source-map/-/source-map-0.5.1.tgz#7e74db5d06ab373a712356eebfaea2fad0ea2367"
@@ -517,6 +521,12 @@ babel-plugin-check-es2015-constants@^6.22.0:
 babel-plugin-date-fns@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-date-fns/-/babel-plugin-date-fns-0.1.0.tgz#6ad4e66129bc051bec9300a0a256e73a983c04a6"
+
+babel-plugin-ramda@1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ramda/-/babel-plugin-ramda-1.4.3.tgz#265b54a92f29f5ed56180b95c499d1ae2a8a25a7"
+  dependencies:
+    ramda "0.x"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -3258,6 +3268,10 @@ querystring@0.2.0:
 querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
+
+ramda@0.25.0, ramda@0.x:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
 
 ramda@^0.24.1:
   version "0.24.1"

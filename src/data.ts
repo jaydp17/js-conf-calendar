@@ -2,7 +2,6 @@ import axios from 'axios';
 import { parse } from 'date-fns';
 
 import { RawConfInfo, ConfInfo } from './types';
-import { getImmediateNext } from './utility';
 
 const getUrlForYear = (year: number) =>
   `https://raw.githubusercontent.com/tech-conferences/javascript-conferences/master/conferences/${year}/javascript.json`;

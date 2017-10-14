@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 
 import { get as getData } from './data';
 import { getImmediateNext } from './utility';
+import { nextConf as sayNextConf } from './speak';
 
 export default {
   LaunchRequest: function() {
@@ -9,13 +10,8 @@ export default {
   },
   NextConf: async function() {
     const confList = await getData();
-    const nextConf = getImmediateNext(confList);
-    this.response.speak(
-      `The next conference is ${nextConf.name} at ${format(
-        nextConf.startDate,
-        'Do MMMM YYYY',
-      )} in ${nextConf.city}, ${nextConf.country}`,
-    );
+    const nextConfs = getImmediateNext(confList);
+    this.response.speak(sayNextConf(nextConfs));
     this.emit(':responseReady');
   },
   SessionEndedRequest: function() {
