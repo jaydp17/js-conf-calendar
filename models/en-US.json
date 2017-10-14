@@ -17,24 +17,26 @@
           "samples": []
         },
         {
-          "name": "HelloWorldIntent",
-          "slots": [],
-          "samples": ["hello", "say hello", "say hello world"]
-        },
-        {
           "name": "NextConf",
           "slots": [],
-          "samples": ["if there are any upcoming talks", "what is next", "what's next"]
-        },
-        {
-          "name": "MyNameIsIntent",
-          "slots": [
-            {
-              "name": "name",
-              "type": "AMAZON.US_FIRST_NAME"
-            }
-          ],
-          "samples": ["my name is {name}", "i am {name}", "you can call me {name}"]
+          "samples": [
+            "if there are any upcoming conferences",
+            "if there are any upcoming talks",
+            "what is next",
+            "what's next",
+            "what is the next conference",
+            "what is the next talk",
+            "what's the next conference",
+            "what's the next talk",
+            "next",
+            "about upcoming conferences",
+            "about upcoming talks",
+            "to show",
+            "show",
+            "to find the next conference",
+            "to find the next talk",
+            "to tell me the next conference"
+          ]
         }
       ]
     }

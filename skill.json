@@ -10,12 +10,30 @@
           "description": "Helps discover Javascript Conferences",
           "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
           "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
+        },
+        "en-GB": {
+          "summary": "Helps discover Javascript Conferences",
+          "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
+          "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
+          "name": "JS Conf Calendar",
+          "description": "Helps discover Javascript Conferences",
+          "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
+          "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
+        },
+        "en-IN": {
+          "summary": "Helps discover Javascript Conferences",
+          "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
+          "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
+          "name": "JS Conf Calendar",
+          "description": "Helps discover Javascript Conferences",
+          "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
+          "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
         }
       },
-      "isAvailableWorldwide": true,
+      "isAvailableWorldwide": false,
       "testingInstructions": "Sample Testing Instructions.",
       "category": "EVENT_FINDERS",
-      "distributionCountries": []
+      "distributionCountries": ["US", "GB", "IN"]
     },
     "apis": {
       "custom": {
@@ -23,6 +41,13 @@
           "sourceDir": "src"
         }
       }
+    },
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
     },
     "manifestVersion": "1.0"
   }
