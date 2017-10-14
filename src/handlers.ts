@@ -1,3 +1,6 @@
+import { get as getData } from './data';
+import { getImmediateNext } from './utility';
+
 export default {
   LaunchRequest: function() {
     this.emit('SayHello');
@@ -12,8 +15,10 @@ export default {
     this.response.speak('Hello World!').cardRenderer('hello world', 'hello world');
     this.emit(':responseReady');
   },
-  NextConf: function() {
-    this.response.speak('JS Conf Foo is coming up this month');
+  NextConf: async function() {
+    const confList = await getData();
+    const nextConf = getImmediateNext(confList);
+    this.response.speak(`The next conference is ${nextConf.name} in ${nextConf.city}, ${nextConf.country}`);
     this.emit(':responseReady');
   },
   SayHelloName: function() {
