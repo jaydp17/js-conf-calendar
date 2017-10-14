@@ -1,7 +1,7 @@
-import * as webpack from 'webpack';
-import { resolve } from 'path';
+const path = require('path');
+const webpack = require('webpack');
 
-const config: webpack.Configuration = {
+module.exports = {
   entry: './src/index.ts',
   resolve: {
     extensions: ['.ts', '.js'],
@@ -9,7 +9,7 @@ const config: webpack.Configuration = {
   output: {
     filename: '[name].js',
     libraryTarget: 'commonjs',
-    path: resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build'),
   },
   // externals: {
   //   'aws-sdk': 'aws-sdk',
@@ -25,5 +25,11 @@ const config: webpack.Configuration = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+  ],
 };
-export default config;
