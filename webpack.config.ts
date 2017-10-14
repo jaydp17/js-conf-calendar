@@ -19,8 +19,9 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
+        // here TypeScript compiles to ESNext and babel transforms to node v6.10
+        use: ['babel-loader', 'ts-loader'],
       },
     ],
   },

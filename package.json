@@ -5,17 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-
     "deploy:skill": "ask deploy --target skill && ask deploy --target model",
     "deploy:skill:only": "ask deploy --target skill",
     "deploy:model:only": "ask deploy --target model",
-
     "predeploy:function": "yarn build",
     "deploy:function": "sls deploy -f skill",
-
     "predeploy:lambda": "yarn build",
     "deploy:lambda": "sls deploy",
-    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jaydeep Solanki <jaydp17@gmail.com> (https://jaydp.com)",
@@ -25,6 +21,9 @@
     "@types/date-fns": "2.6.0",
     "@types/webpack": "3.0.13",
     "ask-cli": "1.0.0-beta.3",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
     "prettier": "1.7.4",
     "serverless": "1.23.0",
     "ts-loader": "2.3.7",
