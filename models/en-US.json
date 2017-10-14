@@ -24,11 +24,7 @@
         {
           "name": "NextConf",
           "slots": [],
-          "samples": [
-            "if there are any upcoming talks",
-            "what is next",
-            "what's next"
-          ]
+          "samples": ["if there are any upcoming talks", "what is next", "what's next"]
         },
         {
           "name": "MyNameIsIntent",
@@ -38,11 +34,7 @@
               "type": "AMAZON.US_FIRST_NAME"
             }
           ],
-          "samples": [
-            "my name is {name}",
-            "i am {name}",
-            "you can call me {name}"
-          ]
+          "samples": ["my name is {name}", "i am {name}", "you can call me {name}"]
         }
       ]
     }
