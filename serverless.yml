@@ -55,7 +55,7 @@ package:
 
 functions:
   skill:
-    handler: main.handler
+    handler: build/main.handler
     description: An Alexa Skill that helps discover Javascript Conferences
     events:
       - alexaSkill
