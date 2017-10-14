@@ -11,9 +11,10 @@ module.exports = {
     libraryTarget: 'commonjs',
     path: path.resolve(__dirname, 'build'),
   },
-  // externals: {
-  //   'aws-sdk': 'aws-sdk',
-  // },
+  devtool: 'source-map',
+  externals: {
+    'aws-sdk': 'aws-sdk',
+  },
   target: 'node',
   module: {
     rules: [

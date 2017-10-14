@@ -49,7 +49,7 @@ provider:
 # you can add packaging information here
 package:
   include:
-    - build/**
+    - build/main.js
   exclude:
     - "*/**"
 
