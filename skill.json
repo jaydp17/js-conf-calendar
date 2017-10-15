@@ -4,7 +4,11 @@
       "locales": {
         "en-US": {
           "summary": "Helps discover Javascript Conferences",
-          "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
+          "examplePhrases": [
+            "Alexa open JS Conf Calendar",
+            "Alexa ask JS Conf Calendar about upcoming conferences",
+            "Alexa ask JS Conf Calendar to find the next conference"
+          ],
           "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
           "name": "JS Conf Calendar",
           "description": "Helps discover Javascript Conferences",
@@ -13,7 +17,11 @@
         },
         "en-GB": {
           "summary": "Helps discover Javascript Conferences",
-          "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
+          "examplePhrases": [
+            "Alexa open JS Conf Calendar",
+            "Alexa ask JS Conf Calendar about upcoming conferences",
+            "Alexa ask JS Conf Calendar to find the next conference"
+          ],
           "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
           "name": "JS Conf Calendar",
           "description": "Helps discover Javascript Conferences",
@@ -22,7 +30,11 @@
         },
         "en-IN": {
           "summary": "Helps discover Javascript Conferences",
-          "examplePhrases": ["Alexa open JS Conf Calendar", "Alexa ask JS Conf Calendar about upcoming conferences"],
+          "examplePhrases": [
+            "Alexa open JS Conf Calendar",
+            "Alexa ask JS Conf Calendar about upcoming conferences",
+            "Alexa ask JS Conf Calendar to find the next conference"
+          ],
           "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
           "name": "JS Conf Calendar",
           "description": "Helps discover Javascript Conferences",
