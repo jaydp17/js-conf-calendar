@@ -20,10 +20,23 @@ function toConfInfo(rawConf: RawConfInfo): ConfInfo {
 }
 
 /**
+ * Fetches data for years in given range
+ * @param {number} startYear
+ * @param {number} endYear
+ * @returns {Promise<ConfInfo[]>}
+ */
+async function getDataForYears(startYear: number, endYear: number): Promise<ConfInfo[]> {
+  let data: ConfInfo[] = [];
+  for (let i = startYear; i <= endYear; i++) {
+    const yearData = await getDataForYear(i);
+    data.concat(yearData.map(toConfInfo));
+  }
+  return data;
+}
+
+/**
  * Fetches the data
  */
 export async function get(): Promise<ConfInfo[]> {
-  const data = await getDataForYear(2017);
-  // TODO: fetch for year 2018 as well
-  return data.map(toConfInfo);
+  return await getDataForYears(2017, 2018);
 }
