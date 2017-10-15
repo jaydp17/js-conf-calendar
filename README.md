@@ -34,6 +34,8 @@ Currently the skill supports only English, thus it'll be available only in
 ## Where's the data coming from?
 There's [this](https://github.com/tech-conferences/javascript-conferences/) open source repository that keeps track of new and upcoming conferences. Huge shoutout to them, for their effort!
 
+## How to Deploy?
+The deployment steps are listed over in [DEPLOY.md](DEPLOY.md).
 
 ## License
 

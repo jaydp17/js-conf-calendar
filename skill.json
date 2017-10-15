@@ -11,21 +11,8 @@
           ],
           "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
           "name": "JS Conf Calendar",
-          "description": "Helps discover Javascript Conferences",
           "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
-          "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
-        },
-        "en-GB": {
-          "summary": "Helps discover Javascript Conferences",
-          "examplePhrases": [
-            "Alexa open JS Conf Calendar",
-            "Alexa ask JS Conf Calendar about upcoming conferences",
-            "Alexa ask JS Conf Calendar to find the next conference"
-          ],
-          "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
-          "name": "JS Conf Calendar",
           "description": "Helps discover Javascript Conferences",
-          "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
           "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
         },
         "en-IN": {
@@ -37,8 +24,21 @@
           ],
           "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
           "name": "JS Conf Calendar",
-          "description": "Helps discover Javascript Conferences",
           "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
+          "description": "Helps discover Javascript Conferences",
+          "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
+        },
+        "en-GB": {
+          "summary": "Helps discover Javascript Conferences",
+          "examplePhrases": [
+            "Alexa open JS Conf Calendar",
+            "Alexa ask JS Conf Calendar about upcoming conferences",
+            "Alexa ask JS Conf Calendar to find the next conference"
+          ],
+          "keywords": ["JavaScript", "Conference", "JS", "node.js", "talk"],
+          "name": "JS Conf Calendar",
+          "smallIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/small.png",
+          "description": "Helps discover Javascript Conferences",
           "largeIconUri": "https://github.com/jaydp17/js-conf-calendar/raw/master/icons/large.png"
         }
       },
@@ -54,13 +54,13 @@
         }
       }
     },
+    "manifestVersion": "1.0",
     "privacyAndCompliance": {
       "allowsPurchases": false,
-      "usesPersonalInfo": false,
-      "isChildDirected": false,
       "isExportCompliant": true,
-      "containsAds": false
-    },
-    "manifestVersion": "1.0"
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
   }
 }
