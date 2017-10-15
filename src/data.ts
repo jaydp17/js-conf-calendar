@@ -3,7 +3,7 @@ import { parse } from 'date-fns';
 
 import { RawConfInfo, ConfInfo } from './types';
 
-const range = (start: number, end: number) => Array.from({length: (end - start)}, (v, k) => k + start);
+const range = (start: number, end: number) => Array.from({length: (1 + end - start)}, (v, k) => k + start);
 
 const getUrlForYear = (year: number) =>
   `https://raw.githubusercontent.com/tech-conferences/javascript-conferences/master/conferences/${year}/javascript.json`;
