@@ -30,5 +30,8 @@ jobs:
       # run build
       - run: yarn build
 
+      # run TSLint
+      - run: yarn lint
+
       # check bundlesize
       - run: yarn bundlesize:check
