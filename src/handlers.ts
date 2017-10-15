@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { get as getData } from './data';
 import { getImmediateNext } from './utility';
 import { nextConf as sayNextConf } from './speak';
+import { nextConf as renderNextConf } from './card';
 
 export default {
   LaunchRequest: function() {
@@ -11,7 +12,7 @@ export default {
   NextConf: async function() {
     const confList = await getData();
     const nextConfs = getImmediateNext(confList);
-    this.response.speak(sayNextConf(nextConfs));
+    this.response.speak(sayNextConf(nextConfs)).cardRenderer('JS Conf Calendar', renderNextConf(nextConfs));
     this.emit(':responseReady');
   },
   SessionEndedRequest: function() {
