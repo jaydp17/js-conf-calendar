@@ -30,6 +30,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
+        SKILL_NAME: JSON.stringify('JS Conf Calendar'),
       },
     }),
   ],

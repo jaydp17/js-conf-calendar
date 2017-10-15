@@ -12,7 +12,7 @@ export default {
   NextConf: async function() {
     const confList = await getData();
     const nextConfs = getImmediateNext(confList);
-    this.response.speak(sayNextConf(nextConfs)).cardRenderer('JS Conf Calendar', renderNextConf(nextConfs));
+    this.response.speak(sayNextConf(nextConfs)).cardRenderer(process.env.SKILL_NAME, renderNextConf(nextConfs));
     this.emit(':responseReady');
   },
   SessionEndedRequest: function() {
@@ -23,7 +23,10 @@ export default {
     this.emit(':responseReady');
   },
   'AMAZON.HelpIntent': function() {
-    this.response.speak("You can try: 'alexa, hello world' or 'alexa, ask hello world my" + " name is awesome Aaron'");
+    this.response.speak(
+      `You can try: 'alexa, open ${process.env.SKILL_NAME}'` +
+        ` or 'alexa, ask ${process.env.SKILL_NAME} when's the next conference'`,
+    );
     this.emit(':responseReady');
   },
   'AMAZON.CancelIntent': function() {
@@ -32,8 +35,8 @@ export default {
   },
   Unhandled: function() {
     this.response.speak(
-      "Sorry, I didn't get that. You can try: 'alexa, hello world'" +
-        " or 'alexa, ask hello world my name is awesome Aaron'",
+      `Sorry, I didn't get that. You can try: 'alexa, ${process.env.SKILL_NAME}'` +
+        ` or 'alexa, ask ${process.env.SKILL_NAME} when's the next conference'`,
     );
   },
 };

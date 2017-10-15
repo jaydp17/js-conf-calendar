@@ -10,7 +10,16 @@
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": []
+          "samples": [
+            "help",
+            "help me",
+            "for help",
+            "to help",
+            "to help me",
+            "what can I ask you",
+            "what do you do",
+            "to help me out"
+          ]
         },
         {
           "name": "AMAZON.StopIntent",
@@ -28,6 +37,10 @@
             "what is the next talk",
             "what's the next conference",
             "what's the next talk",
+            "when is the next conference",
+            "when's the next conference",
+            "when is the next talk",
+            "when's the next talk",
             "next",
             "about upcoming conferences",
             "about upcoming talks",
