@@ -3,6 +3,8 @@ import { parse } from 'date-fns';
 
 import { RawConfInfo, ConfInfo } from './types';
 
+const range = (start: number, end: number) => Array.from({length: (end - start)}, (v, k) => k + start);
+
 const getUrlForYear = (year: number) =>
   `https://raw.githubusercontent.com/tech-conferences/javascript-conferences/master/conferences/${year}/javascript.json`;
 
@@ -26,12 +28,9 @@ function toConfInfo(rawConf: RawConfInfo): ConfInfo {
  * @returns {Promise<ConfInfo[]>}
  */
 async function getDataForYears(startYear: number, endYear: number): Promise<ConfInfo[]> {
-  let data: ConfInfo[] = [];
-  for (let i = startYear; i <= endYear; i++) {
-    const yearData = await getDataForYear(i);
-    data.concat(yearData.map(toConfInfo));
-  }
-  return data;
+ const yearRange = range(startYear, endYear);
+  const rawUnflattenedData: RawConfInfo[][] = await Promise.all(yearRange.map(getDataForYear));
+  return [].concat(...rawUnflattenedData).map(toConfInfo);
 }
 
 /**
