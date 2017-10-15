@@ -2,6 +2,8 @@
 
 # JS Conf Calendar
 
+[![CircleCI](https://img.shields.io/circleci/project/github/jaydp17/js-conf-calendar.svg)](https://circleci.com/gh/jaydp17/js-conf-calendar)
+
 It's an Alexa Skill, that helps you find upcoming JavaScript conferences.
 
 **[NOTE]: The skill is not yet published, as soon as it gets published the link will appear over here**
