@@ -1,6 +1,7 @@
-import { ConfInfo } from './types';
-import { isAfter, min, compareAsc, isEqual } from 'date-fns';
+import { compareAsc, isAfter, isEqual, min } from 'date-fns';
 import * as R from 'ramda';
+
+import { ConfInfo } from './types';
 
 /**
  * Remove the past conferences and keep only the future ones

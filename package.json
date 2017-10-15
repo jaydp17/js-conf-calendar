@@ -17,7 +17,9 @@
     "webpack:stats": "source-map-explorer build/main.js build/main.js.map",
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts-run": "ts-node --compilerOptions '{\"module\": \"commonjs\", \"target\":\"es2015\"}'",
-    "ask:clone": "ask clone"
+    "ask:clone": "ask clone",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "author": "Jaydeep Solanki <jaydp17@gmail.com> (https://jaydp.com)",
   "license": "MIT",
@@ -39,6 +41,8 @@
     "source-map-explorer": "1.5.0",
     "ts-loader": "2.3.7",
     "ts-node": "3.3.0",
+    "tslint": "5.7.0",
+    "tslint-config-prettier": "1.5.0",
     "typescript": "2.5.3",
     "webpack": "3.7.1"
   },

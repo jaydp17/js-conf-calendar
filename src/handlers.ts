@@ -1,39 +1,46 @@
 import { format } from 'date-fns';
 
-import { get as getData } from './data';
-import { getImmediateNext } from './utility';
-import { nextConf as sayNextConf } from './speak';
 import { nextConf as renderNextConf } from './card';
+import { get as getData } from './data';
+import { nextConf as sayNextConf } from './speak';
+import { getImmediateNext } from './utility';
 
 export default {
-  LaunchRequest: function() {
+  LaunchRequest() {
     this.emit('NextConf');
   },
-  NextConf: async function() {
+
+  async NextConf() {
     const confList = await getData();
     const nextConfs = getImmediateNext(confList);
     this.response.speak(sayNextConf(nextConfs)).cardRenderer(process.env.SKILL_NAME, renderNextConf(nextConfs));
     this.emit(':responseReady');
   },
-  SessionEndedRequest: function() {
+
+  SessionEndedRequest() {
+    // tslint:disable-next-line
     console.log('Session ended with reason: ' + this.event.request.reason);
   },
-  'AMAZON.StopIntent': function() {
+
+  'AMAZON.StopIntent'() {
     this.response.speak('Bye');
     this.emit(':responseReady');
   },
-  'AMAZON.HelpIntent': function() {
+
+  'AMAZON.HelpIntent'() {
     this.response.speak(
       `You can try: 'alexa, open ${process.env.SKILL_NAME}'` +
         ` or 'alexa, ask ${process.env.SKILL_NAME} when's the next conference'`,
     );
     this.emit(':responseReady');
   },
-  'AMAZON.CancelIntent': function() {
+
+  'AMAZON.CancelIntent'() {
     this.response.speak('Bye');
     this.emit(':responseReady');
   },
-  Unhandled: function() {
+
+  Unhandled() {
     this.response.speak(
       `Sorry, I didn't get that. You can try: 'alexa, ${process.env.SKILL_NAME}'` +
         ` or 'alexa, ask ${process.env.SKILL_NAME} when's the next conference'`,
