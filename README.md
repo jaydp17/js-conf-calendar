@@ -6,8 +6,6 @@
 
 It's an Alexa Skill, that helps you find upcoming JavaScript conferences.
 
-**[NOTE]: The skill is not yet published, as soon as it gets published the link will appear over here**
-
 ## How to use?
 Once you've enabled the skill, try saying
 
